@@ -70,29 +70,13 @@ article p{
         gap: 50px 30px;
     }
 
-    article{
-        /* flex-flow: column nowrap; */
-        flex-basis: 100px;
-    }
-
     article p{
-        font-size: 1em;
+        font-size: 1.1em;
     }
 }
-@media screen and (max-width: 748px){
-    .container{
-        padding: 20px 10em;
-    }
-
-    article{
-        flex-flow: column wrap;
-        flex-basis: 200px;
-    }
-}
-@media screen and (max-width: 550px){
+@media screen and (max-width: 762px){
     .container{
         padding: 3em 1em;
-        justify-content: flex-start;
     }
 
     article{
@@ -100,7 +84,6 @@ article p{
         flex-basis: 100%;
     }
 }
-
 .container article:nth-child(1){
     border-bottom: 5px solid gold;
 }

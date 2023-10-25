@@ -9,8 +9,7 @@ const updateCount = (element) =>{
         initialValue += increment;
         if(initialValue > value){
             element.textContent = `${value}+`;
-            clearInterval(increaseCount);
-            return; // menghentikan kerja fungsi (tidak mereturn nilai apapun)
+            return ()=> clearInterval(increaseCount); // menghentikan kerja fungsi (tidak mereturn nilai apapun)
         }
         // insert counting ke html sesuai elementnya
         element.textContent = `${initialValue}+`;
@@ -20,6 +19,5 @@ const updateCount = (element) =>{
 // query all class numbers lalu menjadikannya array
 const items = [...document.querySelectorAll('.numbers')];
 items.forEach((item)=>{
-    console.log(item);
     updateCount(item);
 })
